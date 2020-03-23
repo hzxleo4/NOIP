@@ -27,9 +27,10 @@ int main(){
 	for(int i=n-1;i>=1;--i){
 		ni[i] = (i+1) * ni[i+1] % p;
 	}
-	scanf("%d",&t);
+	int T;
+	scanf("%d",&T);
 	long long z = 1;
-	while(t--){
+	while(T--){
 		scanf("%d%d",&t,&k);
 		printf("%lld",z * jie[t] * ni[k] % p * ni[t-k]%p);
 	}

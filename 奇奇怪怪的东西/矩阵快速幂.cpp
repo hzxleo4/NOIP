@@ -1,9 +1,9 @@
 #include<cstdio>
-#define mo 1000000000+7
+#define mo 1000000007
 #define ll long long
 using namespace std;
 struct node{
-    ll a[105][105];
+    ll a[25][25];
 }mp;
 ll n,k;
 node mul(node t,node z){
@@ -36,11 +36,9 @@ void poww(node mp,ll k){
     }
 }
 int main(){
-    scanf("%lld%lld",&n,&k);
+    scanf("%lld%lld",&k,&n);
     for(int i=1;i<=n;++i){
-        for(int j=1;j<=n;++j){
             scanf("%lld",&mp.a[i][j]);
-        }
     }
     poww(mp,k);
     return 0;
